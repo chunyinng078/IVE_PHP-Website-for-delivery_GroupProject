@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+input::-webkit-outer-spin-button,       /*remove the updown arrow in number input*/
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+textarea{
+  color: white;
+  padding: 0 5px;
+  resize: none;
+  font-size: 30px;
+  border-width: 3px;
+  border-style:  solid;
+  border-color: rgb(252, 248, 3);
+  background: none;
+  outline: none;
+  font-weight: bold;
+  position: relative;
+  border-bottom: 3px solid rgb(252, 248, 3);
+  transition: .5s;
+  margin: 1%;
+  text-align: center;
+}
+input[type=number] {
+    -moz-appearance:textfield; 
+}
+
+h1{
+  color: aquamarine;
+  text-shadow: 3px 3px gray;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: orange;
+  font-weight: bold;
+
+}
+
+
+/*the css of "hint" of a input*/
+input[placeholder] {
+  text-align: center;
+}
+
+::placeholder { 
+  color: gainsboro;
+  opacity: 1; 
+  
+}
+
+/*when not thing is filled in the input it will show red line*/
+input:placeholder-shown {
+  border-color: red;
+  transition: .5s;
+}
+
+/*some css for some type of input (not all)*/
+input[type=email] ,input[type=password],input[type=text],input[type=tel],input[type=number]{
+  color: white;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 30px;
+  border: none;
+  background: none;
+  outline: none;
+  font-weight: bold;
+  position: relative;
+  border-bottom: 3px solid rgb(252, 248, 3);
+  transition: .5s;
+  margin: 1%;
+  text-align: center;
+}
+
+
+/*background*/
+body{
+  background-position: center;  /* center the bg*/
+  background-size: cover; /* make the bg fit in full size*/
+  background-attachment: fixed; /* no matter how you zoom the web, the background stay the same*/
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+/*table css*/
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 95%; /*set width of opacity background*/
+  margin: auto;/*make the body in middle*/
+  font-size: 25px;
+  color: whitesmoke ;/*the biggest title*/
+  background-color: rgba(169,169,169, 0.95) ;
+  border: 1px solid #000000;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+th, td {
+  margin: auto;
+padding: 10;
+border: 1px solid black;
+border-collapse: collapse;
+
+}
+
+th{
+
+  background-color: crimson;
+}
+
+td{
+
+  background-color:rgb(115, 54, 255);
+}
+
+/*Responsive Meun*/
+@media only screen and (max-width: 1000px){/*when width<1001px*/
+
+
+  .navbar ul{
+    height: auto;
+    display: flex;    /*only use its column property*/
+    flex-direction: column;  /*vertical*/
+    align-items: center;  /*make verticaled column in middle*/
+  }
+
+  .navbar ul li{
+    width: 50%;
+  }
+
+  .navbar .sub-meun {
+    width: 50%;
+    padding-left: 1.5%;
+  }
+
+  .navbar .sub-meun ul{
+    height: auto;   /*set the height of sub meun*/
+    
+  }
+
+}
+
+/*meun---------------------------------------------------------------------------------------------------------------------*/
+.navbar ul {/*the whole menu*/
+  padding: 0; /*remove spaces on the left*/
+  border-style: solid ;   /*make a line cover the border*/
+   /*color*/
+  border-radius: 15px;  /*make the border round*/
+  background-color: rgb(255,140,0);
+  opacity: .95;   /*add opacity to the meun*/
+
+  text-align: center;     /*center the list in middle*/
+  font-weight: bold;      /*bold the word*/
+  font-size: 18px;        /*set font size*/
+  
+}
+/*staff menu design*/
+#staffNavbar ul{
+  background-color: rgb(4, 146, 39);
+} 
+
+.navbar li {/*each item of main menu*/
+  
+  display: inline-block; /*make the list item  line up in horizontal, inline mean one line can have more than one block*/
+  width: 135px;   /*set width of the item on the main list*/
+  padding: 15px;  /*set padding of the item on the main list*/
+}
+
+.navbar ul li a { /*the words of the main menu*/
+  
+  text-decoration: none;    /*make link dont have a underline and change color*/
+  color: azure; /*change the word color on the main list*/
+  text-shadow: 3px 3px gray;
+
+}
+.navbar ul li a:hover { /*the words of the main menu*/
+  
+
+  color: rgb(115, 54, 255);
+  text-shadow: 0px 0px gray;
+
+}
+
+
+
+.navbar ul li:hover { 
+  
+  background-color: rgb(255,215,0);  /*color*/
+  border-bottom: 1px solid azure; /*set border*/
+  border-radius: 50px;    /*set border*/
+  transition: .4s ease-in-out;  /*set transition */
+  text-decoration: bold;
+  font-size: 20px;
+
+}
+
+#staffNavbar ul li:hover{
+  background-color: rgb(1, 190, 118);
+} 
+
+.navbar img {   /*icon*/
+  width: 60%;   /*set it smaller*/
+}
+
+
+.sub-meun {
+  
+  margin: -17px; /*add margin on left to make it in right place (outside the submeun)*/
+  position: absolute;   /*it position will be position according to the main meun*/
+  transform: scale(0.0);  /*hide the list*/
+  
+
+}
+
+.sub-meun ul{
+  display: flex;    /*fill all width, only use its column property*/
+  flex-direction: column;  /*vertical*/
+
+}
+
+.navbar ul li:hover .sub-meun {
+  margin-top: 16px;     /*add margin on top to make it in right place*/
+  transform: scale(1);  /*display the list*/
+  transition: all 0.4s ease-out;
+  
+}
+
+
+.img-fluid{
+  width: 20px;
+  height: 50px;
+  overflow: hidden;
+  margin-top: -6px;
+}
+
+/*page content*/
+.topic{
+  margin: 5%;/*the place between border and opacity background*/
+  padding: 20px; /*word will not stick with line*/
+  border-radius: 10px;
+  opacity: .85;
+  border: 3px solid blue;
+}
+
+.main-content{/*the whole part*/
+  width: 80%; /*set width of opacity background*/
+  margin: auto;/*make the body in middle*/
+  font-size: 25px;
+  color: whitesmoke ;/*the biggest title*/
+  background-color: rgba(169,169,169, 0.95) ;
+  border: 1px solid #000000;
+  text-align: center;
+
+}
+
+/*Create Shipent Content*/
+
+.createDelivery input{
+
+  width: 50%;
+  height: 30px;
+  font-weight: bold;
+  
+
+}
+
+
+#location{
+  width: 50%;
+  height: 30px;
+  font-weight: bold;
+  text-align:center;
+  text-align-last:center;
+ }
+
+.createDelivery h3{
+
+  text-decoration: underline;
+  
+
+}
+.createDelivery cdlabel{
+  color: crimson;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: oblique;
+
+}
+
+.msg{
+
+  color: palegreen;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: oblique;
+
+
+
+}
+/*Track Delivery*/
+
+.trackTable{/*the whole content*/
+  width: 95%; /*set width of opacity background*/
+  margin: auto;/*make the body in middle*/
+  font-size: 25px;
+  color: whitesmoke ;/*the biggest title*/
+  background-color: rgba(169,169,169, 0.95) ;
+  border: 1px solid #000000;
+  text-align: center;
+}
+
+
+.trackFilter input{
+  width: 20%;
+  font-size: 20px;
+}
+
+/*Update profile*/
+
+.updateProfile input{
+
+  width: 50%;
+  height: 30px;
+  font-weight: bold;
+  
+
+}
+
+.updateProfile h3{
+  text-decoration: underline;
+
+}
+.updateProfile cdlabel{
+  color: crimson;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: oblique;
+
+}
+
+/*Delete account*/
+
+.notice ul{     
+  display: table;
+  margin: 0 auto;
+  text-align: left;
+  color: red;
+}
+
+/*use scale to make the tick in the tickbox bigger*/
+input[type=checkbox]
+{
+  -ms-transform: scale(2); 
+  -moz-transform: scale(2); 
+  -webkit-transform: scale(2); 
+  -o-transform: scale(2); 
+  transform: scale(2);
+  padding: 10px;
+}
+
+.checkboxtext
+{
+  font-size: 110%;
+  display: inline;
+}
+
+.deleteAccount input[type=password],[type=submit] {
+
+  width: 50%;
+  height: 30px;
+  font-weight: bold;
+  
+}
+
+.deleteAccount h3{
+  text-decoration: underline;
+
+}
+.deleteAccount cdlabel{
+  color: crimson;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: oblique;
+
+}
+
+
+/*     GoToTop Button       */
+.goToTop {
+  text-align: center;
+}
+
+#top {
+  width: 50%;
+  height: 30px;
+  
+  background-color: rgb(255,140,0);
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+#top:hover {
+  background-color: yellow;
+}
+
+#btnSubmit, #btnReset{
+
+  width: 50%;
+  height: 30px;
+  font-weight: bold;
+  
+
+}
+/*set create delivery record column shipment status style*/
+.radioGp label{
+/*  let the radio button can be Align*/
+  display: table;
+  margin-left: 45%;
+
+}
+.radioGp input{
+/*  the radio button size*/
+  transform: scale(2);  
+}
+.radioTitle{
+  margin-right:29%;
+
+}
+
+
+
+

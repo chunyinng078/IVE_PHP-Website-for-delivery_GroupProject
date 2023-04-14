@@ -1,0 +1,88 @@
+.login {
+
+    margin-top: 15%;
+    margin-bottom: 15%;
+
+    background-color: gray;
+    margin-right:20% ;
+    margin-left:20% ;
+    padding: 20px; /*word will not stick with line*/
+    border-radius: 10px;
+    opacity: .95;
+    border: 3px solid blue;
+}
+
+input[type=submit],input[type=button]{
+    background-color: orange;
+    color: black;
+    font-size: 16px;
+}
+
+h1{
+
+    color: orange;
+}
+
+img{
+    width: 10%;
+    height: auto;
+
+}
+
+input{
+
+    width: 50%;
+    height: 30px;
+    font-weight: bold;
+
+
+
+}
+.errorMsg{
+
+    color: orangered;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: oblique;
+
+
+}
+
+body{
+    background-position: center;  /* center the bg*/
+    background-size: cover; /* make the bg fit in full size*/
+    background-attachment: fixed; /* no matter how you zoom the web, the background stay the same*/
+}
+
+input[placeholder] {
+    text-align: center;
+}
+
+::placeholder {
+    color: gainsboro;
+    opacity: 1;
+
+}
+
+/*when not thing is filled in the input it will show red line*/
+input:placeholder-shown {
+    border-color: red;
+    transition: .5s;
+}
+
+/*some css for some type of input (not all)*/
+input[type=email] ,input[type=password],input[type=text],input[type=tel],input[type=number]{
+    color: white;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 30px;
+    border: none;
+    background: none;
+    outline: none;
+    font-weight: bold;
+    position: relative;
+    border-bottom: 3px solid rgb(252, 248, 3);
+    transition: .5s;
+    margin: 1%;
+    text-align: center;
+}
